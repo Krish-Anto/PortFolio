@@ -1,0 +1,264 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
+
+section {
+    padding: 40px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section p {
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.contact-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-links li {
+    margin: 10px 0;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-links a i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.contact-links a:hover {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.contact-links a:hover .fa-envelope {
+    color: #ea4335; /* Gmail red */
+}
+
+.contact-links a:hover .fa-github {
+    color: #333; /* GitHub color */
+}
+
+.contact-links a:hover .fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+.contact-links {
+    display: flex; /* Align icons horizontally */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Add space between the icons */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 20px;
+}
+
+.contact-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-links a i {
+    margin-right: 8px;
+    font-size: 24px; /* Increase icon size */
+}
+
+.contact-links a:hover {
+    background-color: #0077b5; /* LinkedIn blue */
+    color: white;
+}
+
+.contact-links a:hover .fa-envelope {
+    color: #ea4335; /* Gmail red */
+}
+
+.contact-links a:hover .fa-linkedin {
+    color: white; /* Change LinkedIn icon color */
+}
+
+.contact-links a:hover .fa-github {
+    color: white; /* Change GitHub icon color */
+}
+
+@media screen and (max-width: 768px) {
+    .contact-links {
+        flex-direction: column; /* Stack icons vertically on small screens */
+        align-items: center; /* Center the icons */
+    }
+
+    .contact-links a {
+        font-size: 16px;
+        padding: 15px;
+        width: 80%; /* Make icons take up more space on smaller screens */
+        text-align: center;
+    }
+}
+.skills-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly */
+    gap: 20px; /* Adds space between columns */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 30px;
+}
+
+.skills-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjust width to make them side by side */
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.skills-box h3 {
+    color: #333;
+    font-size: 22px;
+}
+
+.skills-box ul {
+    padding-left: 20px;
+}
+
+.skills-box ul li {
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stacks them vertically on smaller screens */
+        align-items: center;
+    }
+
+    .skills-box {
+        width: 80%; /* Takes up 80% of the width on smaller screens */
+    }
+}
+/* General styles for the certificates section */
+.certificates-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px; /* Space between certificate boxes */
+    justify-content: center; /* Centers the certificates horizontally */
+    margin-top: 20px;
+}
+
+/* Styling each certificate box */
+.certificate {
+    width: 150px; /* Small width for the thumbnail */
+    height: 200px; /* Small height for the thumbnail */
+    overflow: hidden; /* Prevents the image from overflowing the box */
+    position: relative; /* Necessary for hover effects */
+    border: 2px solid #ddd; /* Border around the box */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Styling the image inside the certificate box */
+.certificate img {
+    width: 100%; /* Image takes full width of the box */
+    height: 100%; /* Image takes full height of the box */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+/* Hover effect for each certificate box */
+.certificate:hover {
+    transform: scale(1.1); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Hover effect for the image inside the box */
+.certificate:hover img {
+    transform: scale(1.1); /* Slight zoom-in effect on the image when hovered */
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the size of certificate boxes for smaller screens */
+    .certificate {
+        width: 120px;
+        height: 160px;
+    }
+}
