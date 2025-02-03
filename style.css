@@ -186,36 +186,82 @@ button:hover {
         text-align: center;
     }
 }
-.skills-container {
+#skills {
+    position: relative;
+    background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c") no-repeat center center/cover;
+    color: #ffffff;
+    padding: 60px 20px;
+    overflow: hidden;
+  }
+  .skill-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ff9a8b, #ff6a88, #ff99ac);
+    -webkit-background-clip: text;
+    background-clip: '';
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Overlay for readability */
+  #skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+    z-index: 1;
+  }
+
+  #skills .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  #skills .container h2{
+    text-align: left;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    color : #ff9a8b;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color : #ff9a8b;
+  }
+
+  .skills-container {
     display: flex;
-    justify-content: space-between; /* Distributes space evenly */
-    gap: 20px; /* Adds space between columns */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    margin-top: 30px;
-}
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-.skills-box {
-    background-color: #fff;
+  .skills-box {
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Adjust width to make them side by side */
-    flex-grow: 1;
-    box-sizing: border-box;
-}
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
 
-.skills-box h3 {
-    color: #333;
-    font-size: 22px;
-}
+  .skills-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
 
-.skills-box ul {
-    padding-left: 20px;
-}
+  .skills-box ul {
+    list-style: none;
+    padding: 0;
+  }
 
-.skills-box ul li {
-    margin-bottom: 8px;
-}
+  .skills-box li {
+    margin: 8px 0;
+  }
 
 @media screen and (max-width: 768px) {
     .skills-container {
@@ -274,3 +320,117 @@ button:hover {
         height: 160px;
     }
 }
+.container-used{
+    margin : 0 auto;
+}
+
+#about {
+    position: relative;
+    background: linear-gradient(135deg, #FFDE59, #FFB833);
+    color: #333;
+    padding: 60px 20px;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  #about h2 {
+    font-size: 2.5rem;
+  }
+
+  #about p {
+    font-size: 1.2rem;
+  }
+
+  /* Bird Animation Styles */
+  .birds {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    animation: fly 8s linear infinite;
+  }
+
+  .bird {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color:white;
+    border-radius: 50% 50% 0 0;
+    transform-origin: center bottom;
+    animation: fly 5s linear infinite;
+  }
+
+  .bird::before,
+  .bird::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(45deg);
+    top: 5px;
+    right: 0;
+  }
+
+  .bird::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: white;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    top: 5px;
+    left: 0;
+  }
+
+  .bird::after {
+    right: -15px;
+  }
+
+  @keyframes fly {
+    0% {
+        transform: translate(-50px, 0) rotate(0deg) scale(0.7);
+      }
+      25% {
+        transform: translate(25vw, -20px) rotate(-5deg) scale(0.8);
+      }
+      50% {
+        transform: translate(50vw, -60px) rotate(5deg) scale(1);
+      }
+      75% {
+        transform: translate(75vw, -20px) rotate(0deg) scale(0.9);
+      }
+      100% {
+        transform: translate(100vw, 10px) rotate(0deg) scale(0.7);
+      }
+  }
+  #projects {
+    position: relative;
+    background: linear-gradient(135deg, #FFDE59, #FFB833);
+    color: #333;
+    padding: 60px 20px;
+    height: auto;
+    overflow: hidden;
+    transition: background-color 0.5s ease;  /* Smooth color transition */
+  }
+
+  #projects:hover {
+    background: linear-gradient(135deg, #2d88ac, #ac4ec6); /* Changes on hover */
+  }
+
+  #projects .container {
+    position: relative;
+    z-index: 2;
+  }
+  a {
+    text-decoration: none;
+    color: #FF6A88;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #FF9A8B;
+  }

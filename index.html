@@ -21,6 +21,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="javascript:void(0);" onclick="openResume()">Resume</a></li>
                     
                 </ul>
             </nav>
@@ -32,6 +33,11 @@
             <h2>About Me</h2>
             <p>Hello! I'm a passionate Full Stack Developer with a certification in Full Stack Development from GUVI Geek Network, Chennai (IITM Research Park). I specialize in MERN Stack technologies and am eager to contribute my skills to build innovative web applications. I am actively looking for opportunities to apply my learning in real-world projects.</p>
         </div>
+        <div class="birds">
+            <div class="bird" style="animation-delay: 0s;"></div>
+            <div class="bird" style="animation-delay: 1s;"></div>
+            <div class="bird" style="animation-delay: 2s;"></div>
+        </div>
     </section>
 
     <section id="skills">
@@ -40,7 +46,7 @@
         
             <div class="skills-container">
                 <div class="skills-box">
-                    <h3>Front-End Development</h3>
+                    <h3 class="skill-title">Front-End Development</h3>
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
@@ -52,7 +58,7 @@
                 </div>
                 
                 <div class="skills-box">
-                    <h3>Back-End Development</h3>
+                    <h3 class="skill-title">Back-End Development</h3>
                     <ul>
                         <li>Node.js</li>
                         <li>Express.js</li>
@@ -62,10 +68,11 @@
                 </div>
                 
                 <div class="skills-box">
-                    <h3>Database</h3>
+                    <h3 class="skill-title">Database</h3>
                     <ul>
                         <li>MongoDB</li>
                         <li>Mongoose (ODM for MongoDB)</li>
+                        <li>MySQL</li>
                     </ul>
                 </div>
             </div>
@@ -80,22 +87,50 @@
             <ul>
                 <li>
                     <h4>Project 1: E-Learning Platform</h4>
-                    <p>A web-based Learning page, built using React Router DOM . Users can find the preferred course and also get the insights and more info about that course.</p><a href="https://polite-jelly-64e21e.netlify.app" target="_blank">Courses Web Page</a>
-                    
+                    <p>A web-based Learning page, built using <b>React Router DOM</b> for Navigation . Users can find the preferred course using Navigation for Courses and also get the insights and more info about that course.</p>
+                    <h4>Tech Stack</h4>
+                    <table>
+                        <tr><th>Frontend Used -</th><td>React</td></tr>
+                    </table><br>
+
+                    <a href="https://polite-jelly-64e21e.netlify.app" target="_blank"><button>Navigation Page</button></a>
+                    <a href="https://golden-cranachan-90f499.netlify.app/" target="_blank"><button>GitHub Page</button></a>
                 </li>
                 <li>
-                    <h4>Project 2: Task Manager App</h4>
-                    <p>A web-based task management application built using React, Node.js, and JWT-based Authentication,MongoDB and Multer for File Upload . Users can create, update, and delete tasks. Implemented JWT-based authentication for secure login.</p><a href="https://petadoptionguvi.netlify.app/" target="_blank">PetAdoption Application</a>
-                    
+                    <h4>Project 2: Pet Adoption App</h4>
+                    <p>A web-based task management application built using React, Node.js, and JWT-based Authentication,MongoDB and Multer for File Upload . Users can create, update, and delete tasks. Implemented JWT-based authentication for secure login.</p>
+                    <h4>Tech Stack</h4>
+                    <table>
+                        <tr><th>Frontend Used -</th><td>React</td></tr>
+                        <tr><th>Backend Used -</th><td>Node.js, Express</td></tr>
+                        <tr><th>Database Used -</th><td>MongoDB</td></tr>
+                        <tr><th>Authentication -</th><td>JWT</td></tr>
+                    </table><br>
+
+                    <a href="https://petadoptionguvi.netlify.app/" target="_blank"><button>PetAdoption Application</button></a>
+
                 </li>
                 <li>
                     <h4>Project 3: API Promise Task</h4>
-                    <p> Using Fetch Function, HTML, Css, JavaScript and BootStrap to create a Interactive UIs .</p><a href="https://celadon-gumption-326d9a.netlify.app/" target="_blank">API Fetch</a>
-                    <a href="https://golden-cranachan-90f499.netlify.app/" target="_blank">ISRO API</a>
+                    <p> Using Fetch Function, HTML, Css, JavaScript and BootStrap to create a Interactive UIs .</p>
+                    <h4>Tech Stack</h4>
+                    <table>
+                        <tr><th>Frontend Used -</th><td>React</td></tr>
+                    </table><br> 
+                    <a href="https://celadon-gumption-326d9a.netlify.app/" target="_blank"><button>API Fetch</button></a>
+                    <a href="https://golden-cranachan-90f499.netlify.app/" target="_blank"><button>ISRO API</button></a>
                 </li>
                 <li>
-                    <h4>Project 4: E-commerce Website</h4>
-                    <p>An online shopping platform where users can browse products, add them to a cart, and proceed with checkout. The website is built using the MERN stack and features a dynamic product catalog.</p> <a href="https://boisterous-jelly-895d89.netlify.app/" target="_blank"> AddtoCart Page</a>
+                    <h4>Project 4: EndPoint Creation</h4>
+                    <p>in this BackEnd Application ,created Express Server using Node Js and JS Functions .</p> 
+                    <h4>Tech Stack</h4>
+
+                    <table>
+                        
+                        <tr><th>Backend Used -</th><td>Node.js, Express</td></tr>
+                        
+                    </table><br>
+                    <a href="https://github.com/Krish-Anto/nodejs-filesystem/blob/main/index.js" target="_blank"><button>GitHub Page</button></a>
                 </li>
             </ul>
         </div>
@@ -177,7 +212,13 @@
             <p>&copy; 2025 Krishnaraj Full Stack Developer Portfolio | All Rights Reserved</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    <!-- <script src="js/script.js" defer></script> -->
+    <script>
+        function openResume() {
+          
+          const resumeUrl = '/Krishnaraj.pdf';  
+          window.open(resumeUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
