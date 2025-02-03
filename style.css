@@ -416,9 +416,14 @@ button:hover {
     transition: background-color 0.5s ease;  /* Smooth color transition */
   }
 
-  #projects:hover {
-    background: linear-gradient(135deg, #2d88ac, #ac4ec6); /* Changes on hover */
+  #projects, #certificates {
+    transition: background 0.3s ease; 
   }
+
+  #projects:hover, #certificates:hover {
+    background: linear-gradient(135deg, #2d88ac, #ac4ec6); /* Gradient background on hover */
+  }
+
 
   #projects .container {
     position: relative;
